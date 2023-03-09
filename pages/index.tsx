@@ -122,7 +122,7 @@ export default function Home() {
       <div className="fixed bottom-0 inset-x-0 flex items-center justify-center py-2 bg-background-primary">
         <p className="text-xs ">GymGPT is powered by ChatGPT.</p>
       </div>
-      <div className="flex flex-col items-center pb-12">
+      <div className="flex flex-col items-center py-12">
         <p className="font-gym text-5xl text-center">
           Welcome to <span className="text-amber-500 inline">GymGPT</span>!
         </p>
