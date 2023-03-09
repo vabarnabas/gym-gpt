@@ -226,8 +226,8 @@ export default function Home() {
             case 3:
               return (
                 <div className="mt-6">
-                  {!isLoading && data ? (
-                    !error ? (
+                  {!isLoading ? (
+                    data && !error ? (
                       <div className="">
                         <div className="gap-y-4 grid sm:grid-cols-2 gap-4">
                           {JSON.parse(data.choices[0].message.content).map(
