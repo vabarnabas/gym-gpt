@@ -119,7 +119,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="fixed bottom-0 inset-x-0 flex items-center justify-center py-2 bg-background-primary">
+      <div className="fixed bottom-0 inset-x-0 flex items-center justify-center py-2 bg-background-primary/50 backdrop-blur-sm">
         <p className="text-xs ">GymGPT is powered by ChatGPT.</p>
       </div>
       <div className="flex flex-col items-center py-12">
@@ -236,11 +236,18 @@ export default function Home() {
                           {JSON.parse(data.choices[0].message.content).map(
                             (result: any) => (
                               <div
-                                className="bg-background-secondary rounded-full py-2 px-4 flex justify-between gap-x-6 font-semibold w-full"
+                                className="bg-background-secondary rounded-full py-3 border border-amber-500 px-6 font-semibold w-full"
                                 key={result.name}
                               >
-                                <p className="text-amber-500">{result.name}</p>
-                                <p className="">{`${result.sets}x${result.reps}`}</p>
+                                <div className="gap-x-6 flex justify-between">
+                                  <p className="text-amber-500">
+                                    {result.name}
+                                  </p>
+                                  <p className="">{`${result.sets}x${result.reps}`}</p>
+                                </div>
+                                <div className="text-xs">
+                                  {result.muscleFocus.join(", ")}
+                                </div>
                               </div>
                             )
                           )}
