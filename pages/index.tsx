@@ -119,11 +119,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-col items-center">
-        <p className="font-gym text-5xl">
-          Welcome to <span className="text-amber-500">GymGPT</span>!
+      <div className="fixed bottom-0 inset-x-0 flex items-center justify-center py-2 bg-background-primary">
+        <p className="text-xs ">GymGPT is powered by ChatGPT.</p>
+      </div>
+      <div className="flex flex-col items-center pb-12">
+        <p className="font-gym text-5xl text-center">
+          Welcome to <span className="text-amber-500 inline">GymGPT</span>!
         </p>
-        <p className="font-medium mt-1">
+        <p className="font-medium mt-1 text-center">
           Let us help you to create the best exercise
         </p>
 
@@ -275,9 +278,6 @@ export default function Home() {
               );
           }
         })()}
-      </div>
-      <div className="fixed bottom-0 inset-x-0 flex items-center justify-center py-2">
-        <p className="text-sm">GymGPT is powered by ChatGPT.</p>
       </div>
     </div>
   );
